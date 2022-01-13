@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Lato', sans-serif;
+    /* This will disable all zoom/pan screen touch movements */
+    touch-action: none;
+}
+body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    color: #fff;
+    background: rgb(247,244,244);
+    background: -moz-linear-gradient(0deg, rgba(247,244,244,1) 0%, rgba(254,254,254,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(247,244,244,1) 0%, rgba(254,254,254,1) 100%);
+    background: linear-gradient(0deg, rgba(247,244,244,1) 0%, rgba(254,254,254,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f7f4f4",endColorstr="#fefefe",GradientType=1);
+}
+
+h1 {
+    position: relative;
+    left: 0.7em;
+    top: 0;
+}
+img {
+    width: 100%;
+    vertical-align: middle;
+}
+canvas {
+    display: unset!important;
+    z-index: 10;
+}
+.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .2s linear;
+}
+.hidden {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s .2s, opacity .2s linear;
+}
+.full-opacity {
+    opacity: 1;
+    transition: opacity .2s linear;
+}
+.half-opacity {
+    opacity: 0.5;
+    transition: opacity .2s linear;
+}
+
+
+#loading-text-section {
+    width: 100vw;
+    min-height: 100%;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #4B4B4B;
+    font-size: 1.5em;
+    background-color: #fff;
+    z-index: -5;
+}
+#loading-text-section p {
+    margin-top: 1em;
+}
+
+#splash-screen-scene {
+    min-height: 100%;
+    color: #4B4B4B;
+    text-align: center;
+}
+.zapbox-logo {
+    position: relative;
+    margin-top: 1em;
+}
+#zapbox-promo img {
+    width: 147%;
+    position: relative;
+    right: 86px;
+    bottom: 15px;
+}
+#launch-btn {
+    margin: 2em auto 0;
+    display: block;
+    border: 2px solid #e1e1e1;
+    border-radius: 30px;
+    padding: .5em;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 150px;
+    z-index: 99999;
+    cursor: pointer;
+}
+
+#top-shadow {
+    position: fixed;
+}
+.bottom-section {
+    position:fixed;
+    bottom:0;
+    z-index:2;
+    width:100%;
+}
+#zappar-placement-ui,
+#zappar-replacement-ui {
+    margin:  0 auto 2em;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.splide {
+    padding: 0 0.2em;
+}
+.splide p {
+    position: relative;
+    left: 1.5em;
+    padding-right: 20%;
+    line-height: 16px;
+    text-align: justify;
+}
+.splide__track {
+    bottom: 1.5em;
+    overflow: visible!important;
+}
+.splide__pagination {
+    right: auto !important;
+    left: 0.7em !important;
+}
+.splide__pagination--custom {
+    display: none !important;
+}
+#swipe-to-discover {
+    top: 6.7em;
+    text-align: center;
+    left: auto;
+    padding-right: 0;
+}
+#call-to-action-btns, #snapshot-btns {
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+}
+#call-to-action-btns > * {
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+#reset-btn, #zappar-replacement-ui {
+    position: fixed;
+    top: 0;
+    left: auto;
+    right: 0;
+    width: 44px;
+    background-color: transparent;
+    cursor: pointer;
+}
+#zappar-replacement-ui {
+    padding: 0;
+    margin: 0;
+    left: 0;
+    top: 0;
+}
+
+#back-btn {
+    position: absolute;
+    width: 44px;
+    cursor: pointer;
+}
+#snapshot-btns {
+    justify-content: center;
+}
+#snapshot-btns > * {
+    cursor: pointer;
+}
+#phone-toggle-btn, #snapshot-btn {
+    margin-right: 1.5em;
+    position: relative;
+    right: 2em;
+}
+#phone-toggle-btn {
+    align-self: center;
+    width: 76px;
+}
+#snapshot-btn {
+    width: 138px;
+}
+
+/*
+ * Media queries
+ * Snippets - https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+ */
+/* ----------- iPhone 4 and 4S ----------- */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+      body {
+          font-size: 0.7em;
+      }
+      #launch-btn {
+          margin: 2em auto 0;
+          position: relative;
+          bottom: 2.5em;
+      }
+      #zee-cookie-notice p {
+        width: 260px;
+    }
+}
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+      #zapbox-promo-img {
+          width: 140%;
+          right: 76px;
+      }
+      #launch-btn {
+          margin: 2em auto 0;
+          position: relative;
+          bottom: 4.5em;
+      }
+}
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    body {
+        font-size: 0.7em;
+    }
+    #swipe-to-discover {
+        top: 2em;
+    }
+    .splide p {
+        line-height: unset;
+    }
+    .two-lines {
+        width: 70%;
+    }
+}
+/* ----------- iPhone 6(+), 6S, 7(+) and 8(+) ----------- */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    body {
+        font-size: 1em;
+    }
+}
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    body {
+        font-size: 1.2em;
+    }
+    #swipe-to-discover {
+        top: 2em;
+    }
+}
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    body {
+        font-size: 1.5em;
+    }
+    #zappar-placement-ui {
+        width: 300px;
+    }
+    .splide p {
+        line-height: unset;
+    }
+}
