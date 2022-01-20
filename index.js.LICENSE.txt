@@ -10,9 +10,9 @@
 
 /*!
  * Splide.js
- * Version  : 3.6.9
+ * Version  : 3.6.11
  * License  : MIT
- * Copyright: 2021 Naotoshi Fujita
+ * Copyright: 2022 Naotoshi Fujita
  */
 
 /*! Hammer.JS - v2.0.7 - 2016-04-22
