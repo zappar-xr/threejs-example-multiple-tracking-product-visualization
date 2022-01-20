@@ -35,7 +35,7 @@
     "@splidejs/splide": "^3.6.4",
     "@zappar/sharing": "^1.1.2",
     "@zappar/webgl-snapshot": "^1.0.1",
-    "@zappar/zappar-threejs": "^0.3.33",
+    "@zappar/zappar-threejs": "^0.4.0-beta.5",
     "gsap": "^3.8.0",
     "hammerjs": "^2.0.8",
     "three": "^0.130.1"
