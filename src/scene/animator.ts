@@ -1,6 +1,5 @@
 /* eslint-disable no-case-declarations */
 import Splide from '@splidejs/splide';
-import * as THREE from 'three';
 import Hammer from 'hammerjs';
 import { gsap } from 'gsap';
 import DocumentManager from '../dom/elements';
@@ -164,54 +163,8 @@ hammer.on('swiperight', () => {
   splide.go(splide.index - 1);
 });
 
-class Tweens {
-  public headsetFloatTween!: gsap.core.Tween;
-
-  public adaptorFloatTween!: gsap.core.Tween;
-
-  public controllerFloatTween!: gsap.core.Tween;
-
-  public anchorFloatTween!: gsap.core.Tween;
-
-  public killAll() : void {
-    this.headsetFloatTween?.kill();
-    this.adaptorFloatTween?.kill();
-    this.controllerFloatTween?.kill();
-    this.anchorFloatTween?.kill();
-  }
-
-  public initialise(
-    instantTrackingHeadset: THREE.Object3D,
-    adaptor: THREE.Object3D,
-    controller: THREE.Object3D,
-    anchor: THREE.Object3D,
-  ) : void {
-    this.headsetFloatTween = gsap.fromTo(
-      instantTrackingHeadset.position, { y: 0.5 }, {
-        y: 0.6, duration: 2, ease: 'sine.inOut', yoyo: true, repeat: -1,
-      },
-    );
-    this.adaptorFloatTween = gsap.fromTo(
-      adaptor.position, { y: 0.2 }, {
-        y: 0.3, duration: 2, ease: 'sine.inOut', yoyo: true, repeat: -1,
-      },
-    );
-    this.controllerFloatTween = gsap.fromTo(
-      controller.position, { y: 0.5 }, {
-        y: 0.6, duration: 2, ease: 'sine.inOut', yoyo: true, repeat: -1,
-      },
-    );
-    this.anchorFloatTween = gsap.fromTo(
-      anchor.position, { y: 0.35 }, {
-        y: 0.45, duration: 2, ease: 'sine.inOut', yoyo: true, repeat: -1,
-      },
-    );
-  }
-}
-
 export default {
   switchSlide,
   splide,
   gsap,
-  Tweens,
 };

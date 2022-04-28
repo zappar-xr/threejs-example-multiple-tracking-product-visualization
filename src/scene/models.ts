@@ -28,7 +28,7 @@ class Models {
 
   public floor = new THREE.Mesh(
     new THREE.PlaneBufferGeometry(window.innerWidth, window.innerHeight),
-    new THREE.ShadowMaterial({ opacity: 0.2 }),
+    new THREE.ShadowMaterial({ opacity: 0.25 }),
   );
 
   public faceMask= new ZapparThree.HeadMaskMeshLoader(this.loadingManager).load();
@@ -36,7 +36,6 @@ class Models {
   constructor(private loadingManager: THREE.LoadingManager) {
     this.floor.receiveShadow = true;
     this.floor.rotation.x = -Math.PI / 2;
-    // this.init();
   }
 
   public async load() {
@@ -56,6 +55,7 @@ class Models {
     this.setupVisibility();
     this.setupTransforms();
     this.setupMaterials();
+    this.setupShadows();
   }
 
   private setupTransforms() {
@@ -98,10 +98,28 @@ class Models {
   }
 
   private setupMaterials() {
-  // Add the plasticy material to the relevant meshes
+    // Add the plasticy material to the relevant meshes
     ((this.instantTrackingHeadset.getObjectByName('plastictransparent2') as THREE.Mesh).material) = meshPlasticTransparentMaterial;
     ((this.faceTrackingHeadset.getObjectByName('plastictransparent2') as THREE.Mesh).material) = meshPlasticTransparentMaterialFace;
     ((this.adaptor.getObjectByName('polySurface128') as THREE.Mesh).material) = meshPlasticTransparentMaterial;
+  }
+
+  private setupShadows() {
+    this.instantTrackingHeadset.traverse((node:any) => {
+      if (node.isMesh) node.castShadow = true;
+    });
+
+    this.adaptor.traverse((node:any) => {
+      if (node.isMesh) node.castShadow = true;
+    });
+
+    this.controller.traverse((node:any) => {
+      if (node.isMesh) node.castShadow = true;
+    });
+
+    this.anchor.traverse((node:any) => {
+      if (node.isMesh) node.castShadow = true;
+    });
   }
 }
 

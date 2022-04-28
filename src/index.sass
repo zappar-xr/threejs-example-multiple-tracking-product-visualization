@@ -32,7 +32,6 @@ h1 {
 }
 img {
     width: 100%;
-    vertical-align: middle;
 }
 canvas {
     display: unset!important;
@@ -78,12 +77,16 @@ canvas {
 }
 
 #splash-screen-scene {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     min-height: 100%;
     color: #4B4B4B;
     text-align: center;
 }
 .zapbox-logo {
-    position: relative;
     margin-top: 1em;
 }
 #zapbox-promo img {
@@ -162,6 +165,8 @@ canvas {
 #call-to-action-btns > * {
     flex-grow: 1;
     cursor: pointer;
+    top: 5px;
+    position: relative;
 }
 
 #reset-btn, #zappar-replacement-ui {

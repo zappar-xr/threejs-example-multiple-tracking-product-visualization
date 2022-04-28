@@ -1,6 +1,6 @@
 {
   "name": "zappar-threejs-example",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Example using Zappar's ThreeJS wrapper",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -12,10 +12,10 @@
   "license": "Proprietary",
   "devDependencies": {
     "@types/hammerjs": "^2.0.40",
-    "@types/node": "^14.14.33",
-    "@types/three": "^0.130.1",
-    "@typescript-eslint/eslint-plugin": "^4.17.0",
-    "@typescript-eslint/parser": "^4.17.0",
+    "@types/node": "^17.0.16",
+    "@types/three": "^0.134.0",
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/parser": "^5.11.0",
     "copy-webpack-plugin": "^8.0.0",
     "css-loader": "^5.1.1",
     "eslint": "^7.21.0",
@@ -23,13 +23,13 @@
     "eslint-plugin-import": "^2.22.1",
     "file-loader": "^6.2.0",
     "gh-pages": "^3.1.0",
-    "html-webpack-plugin": "^5.3.1",
+    "html-webpack-plugin": "^5.5.0",
     "style-loader": "^2.0.0",
-    "ts-loader": "^8.0.17",
-    "typescript": "^4.2.3",
-    "webpack": "^5.24.4",
-    "webpack-cli": "^4.5.0",
-    "webpack-dev-server": "^3.11.2"
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.5",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.7"
   },
   "dependencies": {
     "@splidejs/splide": "^3.6.4",
@@ -38,6 +38,6 @@
     "@zappar/zappar-threejs": "^2.0.0-beta.8",
     "gsap": "^3.8.0",
     "hammerjs": "^2.0.8",
-    "three": "^0.130.1"
+    "three": "^0.128.0"
   }
 }

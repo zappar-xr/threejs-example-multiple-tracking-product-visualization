@@ -29,9 +29,9 @@ module.exports = {
     }),
   ],
   devServer: {
-    contentBase: './dist/',
+    static: './dist/',
     historyApiFallback: true,
-    https: true,
+    server: 'https',
     host: '0.0.0.0',
     hot: true,
     open: true,
@@ -53,11 +53,6 @@ module.exports = {
             name: '[sha256:hash:base64:16].[ext]',
           },
         }],
-      },
-      {
-        test: /zcv\.wasm$/,
-        type: 'javascript/auto',
-        loader: 'file-loader',
       },
     ],
   },

@@ -10,7 +10,7 @@ export default function getLights() {
   directionalLight.position.set(0, 1, 0);
   directionalLight.lookAt(0, 0, 0);
 
-  const d = 10;
+  const d = 5;
   directionalLight.shadow.camera.left = -d;
   directionalLight.shadow.camera.right = d;
   directionalLight.shadow.camera.top = d;

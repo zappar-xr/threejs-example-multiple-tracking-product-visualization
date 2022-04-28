@@ -10,14 +10,16 @@ const faceTrackingEnvMap = new RGBELoader().load(faceTrackingEnvMapImg, () => {
 // Create a shiny, plasticy material
 const meshPlasticTransparentMaterialFace = new THREE.MeshPhysicalMaterial(
   {
-    roughness: 0.2,
-    transmission: 0.9,
-    refractionRatio: 0.5,
-    side: THREE.DoubleSide,
-    premultipliedAlpha: true,
-    envMap: faceTrackingEnvMap,
-    envMapIntensity: 0.7,
+    roughness: 0,
+    reflectivity: 0.5,
     clearcoat: 1,
+    clearcoatRoughness: 0,
+    transmission: 0.7,
+    transparent: true,
+    opacity: 0.5,
+    side: THREE.DoubleSide,
+    envMap: faceTrackingEnvMap,
+    envMapIntensity: 0.9,
   },
 );
 

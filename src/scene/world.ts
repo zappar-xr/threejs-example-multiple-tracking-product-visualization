@@ -76,12 +76,6 @@ class World {
     this.trackerGroups.instant.add(instantTrackingHeadset, adaptor, controller, anchor);
 
     this.trackerGroups.face.add(faceTrackingHeadset, phone);
-
-    // Make sure we catch all the meshes that can cast a shadow
-    // Ensure that the meshes cast shadows.
-    this.scene.traverse((node) => {
-      if (node instanceof THREE.Mesh) node.castShadow = true;
-    });
   }
 
   private onResize() {

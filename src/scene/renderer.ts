@@ -15,7 +15,6 @@ class Renderer extends THREE.WebGLRenderer {
     // Set sRGB encoding for the renderer and the camera.
     this.outputEncoding = THREE.sRGBEncoding;
     this.physicallyCorrectLights = true;
-    this.toneMapping = THREE.ACESFilmicToneMapping;
 
     // Resize the canvas if the window resizes
     window.addEventListener('resize', () => this.resize());

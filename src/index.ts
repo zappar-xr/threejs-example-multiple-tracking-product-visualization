@@ -26,8 +26,6 @@ class Experience {
 
   private DOM = new DocumentManager(this.world, AnimationHandler);
 
-  private tweens = new AnimationHandler.Tweens();
-
   public constructor() {
     this.world.load().then(() => {
       this.renderer.setAnimationLoop(
@@ -65,14 +63,11 @@ class Experience {
 
     this.DOM.instantTrackingState();
 
-    // Stop the objects from floating so we can properly place our objects
     // Reset the position so it's easier to place
     instantTrackingHeadset.position.y = 0.5;
     adaptor.position.y = 0.2;
     controller.position.y = 0.5;
     anchor.position.y = 0.35;
-
-    this.tweens.killAll();
   }
 
   /*
@@ -116,25 +111,8 @@ class Experience {
     // The user can confirm the location by tapping on the screen
     this.world.soundManager.defaultButtonSoundPlay();
 
-    const {
-      instantTrackingHeadset, adaptor, controller, anchor,
-    } = this.world.models;
     // If we haven't placed when the button has been tapped...
     this.DOM.isPlacedUIState(this.instantTrackerPlaced);
-
-    if (!this.instantTrackerPlaced) {
-    // Float the objects
-      this.tweens.initialise(instantTrackingHeadset, adaptor, controller, anchor);
-    } else {
-    // Stop the objects from floating so we can properly place our objects
-    // Reset the position so it's easier to place
-      instantTrackingHeadset.position.y = 0.5;
-      adaptor.position.y = 0.2;
-      controller.position.y = 0.5;
-      anchor.position.y = 0.35;
-
-      this.tweens.killAll();
-    }
 
     this.instantTrackerPlaced = !this.instantTrackerPlaced;
   }
