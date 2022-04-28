@@ -1,5 +1,5 @@
 /*!
- * GSAP 3.10.2
+ * GSAP 3.10.4
  * https://greensock.com
  *
  * @license Copyright 2008-2022, GreenSock. All rights reserved.
@@ -7,13 +7,6 @@
  * Club GreenSock members, the agreement issued with that membership.
  * @author: Jack Doyle, jack@greensock.com
 */
-
-/*!
- * Splide.js
- * Version  : 3.6.12
- * License  : MIT
- * Copyright: 2022 Naotoshi Fujita
- */
 
 /*! Hammer.JS - v2.0.7 - 2016-04-22
  * http://hammerjs.github.io/
