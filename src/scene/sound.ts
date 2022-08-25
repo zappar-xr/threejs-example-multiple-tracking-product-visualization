@@ -1,6 +1,6 @@
-const buttonTonal = new URL('../../assets/button-tonal.wav', import.meta.url).href;
-const cameraSnap = new URL('../../assets/camera-snap.ogg', import.meta.url).href;
-const swoosh = new URL('../../assets/swoosh.wav', import.meta.url).href;
+const buttonTonal = new URL('../assets/button-tonal.wav', import.meta.url).href;
+const cameraSnap = new URL('../assets/camera-snap.ogg', import.meta.url).href;
+const swoosh = new URL('../assets/swoosh.wav', import.meta.url).href;
 /*
  * Sounds
  */
