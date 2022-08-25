@@ -7,7 +7,7 @@ import World from './world';
 /*
  * Splide slideshow
  */
-const splide = new Splide('.splide', { arrows: false, pagination: 'slider' });
+const splide = new Splide('.splide', { arrows: false, pagination: true });
 // Hide pagination on mount
 splide.on('pagination:mounted', (data) => {
   data.list.classList.add('splide__pagination--custom');

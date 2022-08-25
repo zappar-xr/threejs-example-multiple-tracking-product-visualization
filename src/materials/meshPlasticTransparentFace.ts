@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader';
-import faceTrackingEnvMapImg from '../../assets/EnvMap.hdr';
+
+const faceTrackingEnvMapImg = new URL('../assets/EnvMap.hdr', import.meta.url).href;
 
 // Create environmentMap for this section
 const faceTrackingEnvMap = new RGBELoader().load(faceTrackingEnvMapImg, () => {

@@ -3,7 +3,7 @@
 
 // In this example we track a 3D model using instant world tracking
 
-import './index.sass';
+import './index.css';
 import './splide.min.css';
 import World from './scene/world';
 import DocumentManager from './dom/elements';

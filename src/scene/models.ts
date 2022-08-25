@@ -5,11 +5,13 @@ import * as THREE from 'three';
 import * as ZapparThree from '@zappar/zappar-threejs';
 import AsyncGLTFLoader from '../util/asyncGLTF';
 
-import headsetModel from '../../assets/headset.glb';
-import lensModel from '../../assets/lensgltf.glb';
-import controllerModel from '../../assets/controller.glb';
-import anchorModel from '../../assets/anchor.glb';
-import phoneModel from '../../assets/phone.glb';
+const headsetModel = new URL('../assets/headset.glb', import.meta.url).href;
+const lensModel = new URL('../assets/lensgltf.glb', import.meta.url).href;
+const controllerModel = new URL('../assets/controller.glb', import.meta.url).href;
+const anchorModel = new URL('../assets/anchor.glb', import.meta.url).href;
+const phoneModel = new URL('../assets/phone.glb', import.meta.url).href;
+
+
 import meshPlasticTransparentMaterial from '../materials/meshPlasticTransparent';
 import meshPlasticTransparentMaterialFace from '../materials/meshPlasticTransparentFace';
 
